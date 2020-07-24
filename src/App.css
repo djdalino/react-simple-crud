@@ -27,3 +27,34 @@
 .navbar-menu ul li a {
   text-decoration: none;
 }
+
+.crud-wrapper {
+  margin: 50px;
+  padding: 40px;
+  background: #343a401a;
+}
+
+h1.text-center {
+  margin-bottom: 30px;
+}
+
+h1.text-center {
+  margin-bottom: 30px;
+}
+
+input.btn.btn-primary {
+  padding: 10px 25px;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  top: 10px;
+}
+
+.form-check-input {
+  position: absolute;
+  margin-top: 12px;
+  margin-left: -1.25rem;
+}
+form.mx-auto {
+  width: 500px;
+}

@@ -307,3 +307,7 @@ export const initialState = [
     ],
   },
 ];
+
+export function getData() {
+  return initialState.map((i) => i);
+}

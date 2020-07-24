@@ -1,13 +1,13 @@
-import React, { useState, useEffect, useContext } from "react";
-import { StateContext } from "../../../context/context";
+import React, { useState, useEffect } from "react";
+import { getData } from "../../../context/initialState";
 import DatePicker from "react-datepicker";
 import { courses } from "../course/course";
 import MultiSelect from "react-multi-select-component";
 import { withRouter } from "react-router-dom";
 const Update = (props) => {
+  console.log(props.data);
   const editId = props.match.params.id;
-  console.log(editId);
-  const [data, setData] = useContext(StateContext);
+  const [data, setData] = useState(getData());
   const [item, setItem] = useState([]);
   const [birthday, setBirthday] = useState("");
   const [gender, setGender] = useState("");
@@ -29,7 +29,6 @@ const Update = (props) => {
   const updateUser = (id, updatedUser) => {
     setData(data.map((d) => (d._id === id ? updatedUser : d)));
   };
-  console.log(item);
   const updateItem = (e) => {
     e.preventDefault();
     if (
@@ -49,6 +48,7 @@ const Update = (props) => {
         gender: gender,
         course: course,
       });
+
       alert("edit successfully");
       props.history.push("/");
     }
@@ -134,9 +134,8 @@ const Update = (props) => {
               value="Female"
             />
             <label
-              className="form-check-label"
+              className="form-check-label col-sm-2 col-form-label"
               htmlFor="female"
-              className="col-sm-2 col-form-label"
             >
               Female
             </label>

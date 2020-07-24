@@ -4,11 +4,14 @@ import "./index.css";
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
 import { BrowserRouter } from "react-router-dom";
+import { ManageState } from "./context/manageState";
 ReactDOM.render(
   <React.StrictMode>
-    <BrowserRouter>
-      <App />
-    </BrowserRouter>
+    <ManageState>
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
+    </ManageState>
   </React.StrictMode>,
   document.getElementById("root")
 );

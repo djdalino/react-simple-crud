@@ -1,0 +1,33 @@
+.modal-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.modal-body {
+  position: fixed;
+  padding: 30px !important;
+  top: 20%;
+  left: 0;
+  right: 0;
+  background-color: lightgrey;
+  margin: auto;
+  width: 400px;
+  height: auto;
+}
+.modal-label {
+  margin: 0;
+  padding: 0;
+}
+.button-wrapper {
+  width: 100%;
+}
+
+.close-modal {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
