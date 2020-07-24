@@ -5,13 +5,16 @@ import App from "./App";
 import * as serviceWorker from "./serviceWorker";
 import { BrowserRouter } from "react-router-dom";
 import { ManageState } from "./context/manageState";
+import { StateManageProvider } from "./context/context";
 ReactDOM.render(
   <React.StrictMode>
-    <ManageState>
-      <BrowserRouter>
-        <App />
-      </BrowserRouter>
-    </ManageState>
+    <StateManageProvider>
+      <ManageState>
+        <BrowserRouter>
+          <App />
+        </BrowserRouter>
+      </ManageState>
+    </StateManageProvider>
   </React.StrictMode>,
   document.getElementById("root")
 );

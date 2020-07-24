@@ -86,6 +86,10 @@ const Create = (props) => {
                   <DatePicker
                     selected={birthday}
                     onChange={(date) => setBirthday(date)}
+                    peekNextMonth
+                    showMonthDropdown
+                    showYearDropdown
+                    dropdownMode="select"
                   />
                 </div>
                 <div className="form-group row">

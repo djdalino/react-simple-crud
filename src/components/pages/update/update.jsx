@@ -1,13 +1,12 @@
-import React, { useState, useEffect } from "react";
-import { getData } from "../../../context/initialState";
+import React, { useState, useEffect, useContext } from "react";
+import { StateContext } from "../../../context/context";
 import DatePicker from "react-datepicker";
 import { courses } from "../course/course";
 import MultiSelect from "react-multi-select-component";
 import { withRouter } from "react-router-dom";
 const Update = (props) => {
-  console.log(props.data);
   const editId = props.match.params.id;
-  const [data, setData] = useState(getData());
+  const [data, setData] = useContext(StateContext);
   const [item, setItem] = useState([]);
   const [birthday, setBirthday] = useState("");
   const [gender, setGender] = useState("");
@@ -96,7 +95,7 @@ const Update = (props) => {
             type="text"
             name="lastName"
             value={item.lastName}
-            onChange={(e) => setItem(e.target.value)}
+            onChange={handleInputChange}
           />
         </div>
 

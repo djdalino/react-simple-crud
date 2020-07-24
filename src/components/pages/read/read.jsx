@@ -65,6 +65,12 @@ const Read = () => {
                         )}
                       </td>
                       <td>
+                        {/* <button
+                          className="btn btn-primary"
+                          onClick={() => editItem(d._id)}
+                        >
+                          Edit
+                        </button> */}
                         <Link to={`/edit/${d._id}`} className="btn btn-primary">
                           Edit
                         </Link>

@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
+import { StateContext } from "./context";
 import uuid4 from "uuid";
 import { courses } from "../components/pages/course/course";
-import { getData } from "./initialState";
 const StateProvider = React.createContext();
 
 const ManageState = (props) => {
-  const [data, setData] = useState(getData());
+  const [data, setData] = useContext(StateContext);
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [middleName, setMiddleName] = useState("");
@@ -15,7 +15,7 @@ const ManageState = (props) => {
   const [error, setError] = useState(false);
   const [modal, setModal] = useState(false);
   const [modalData, setModalData] = useState([]);
-
+  const [currentUser, setCurrentUser] = useState([]);
   const handleModalData = (id) => {
     setModalData(data.find((d) => d._id === id));
     setModal(!modal);
@@ -52,6 +52,16 @@ const ManageState = (props) => {
     }
   };
 
+  //Delete Item
+  const deleteItem = (id) => {
+    setData(data.filter((d) => d._id !== id));
+    console.log(data);
+  };
+  //Edit Item
+  const editItem = (id) => {
+    setCurrentUser(data.find((d) => d._id === id));
+  };
+  console.log(currentUser._id);
   return (
     <StateProvider.Provider
       value={{
@@ -72,6 +82,8 @@ const ManageState = (props) => {
         modal,
         setModal,
         modalData,
+        editItem: editItem,
+        deleteItem: deleteItem,
         addItem: addItem,
         handleModalData: handleModalData,
       }}
