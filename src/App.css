@@ -1,0 +1,29 @@
+* {
+  padding: 0px;
+  margin: 0px;
+}
+.navbar {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+}
+.navbar-logo {
+  padding: 5px;
+}
+.navbar-menu {
+  padding: 5px;
+
+  width: 50%;
+}
+.navbar-menu ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-evenly;
+}
+.navbar-menu ul li {
+  list-style: none;
+}
+.navbar-menu ul li a {
+  text-decoration: none;
+}
