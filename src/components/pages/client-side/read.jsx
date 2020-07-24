@@ -11,7 +11,7 @@ const Read = () => {
         console.log(modal);
         return (
           <div className="container">
-            <table className="table table-striped table-responsive">
+            <table className="table table-striped table-responsive-xl">
               <thead>
                 <tr>
                   <th scope="col">First</th>

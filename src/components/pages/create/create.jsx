@@ -39,7 +39,7 @@ const Create = (props) => {
                 <div className="form-group row ">
                   <label
                     htmlFor="firstName"
-                    className="col-lg-3 col-sm-6 col-form-label"
+                    className="col-lg-3 col-sm-3 col-form-label"
                   >
                     First Name*
                   </label>
@@ -54,7 +54,7 @@ const Create = (props) => {
                 <div className="form-group row">
                   <label
                     htmlFor="middleName"
-                    className="col-lg-3 col-form-label"
+                    className="col-lg-3 col-sm-3 col-form-label"
                   >
                     Middle Name
                   </label>
@@ -67,7 +67,10 @@ const Create = (props) => {
                   />
                 </div>
                 <div className="form-group row">
-                  <label htmlFor="lastName" className="col-lg-3 col-form-label">
+                  <label
+                    htmlFor="lastName"
+                    className="col-lg-3 col-sm-3 col-form-label"
+                  >
                     Last Name*
                   </label>
                   <input
@@ -80,7 +83,10 @@ const Create = (props) => {
                 </div>
 
                 <div className="form-group row">
-                  <label htmlFor="birthday" className="col-lg-3 col-form-label">
+                  <label
+                    htmlFor="birthday"
+                    className="col-lg-3 col-sm-3 col-form-label"
+                  >
                     Birth Date*
                   </label>
                   <DatePicker

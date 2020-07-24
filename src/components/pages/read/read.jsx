@@ -23,7 +23,7 @@ const Read = () => {
         }
         return (
           <div className="container mt-5">
-            <table className="table table-striped table-responsive">
+            <table className="table table-striped table-responsive-xl">
               <thead>
                 <tr>
                   <th scope="col">First</th>
