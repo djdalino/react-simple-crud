@@ -98,7 +98,7 @@ const Create = (props) => {
                   </label>
                   <div className="form-check">
                     <input
-                      className="form-check-input"
+                      className="form-check-input col-lg-1"
                       type="radio"
                       name="gender"
                       onChange={(e) => setGender(e.target.value)}
@@ -106,13 +106,13 @@ const Create = (props) => {
                       value="Male"
                     />
                     <label
-                      className="form-check-label mr-5 col-lg-2"
+                      className="form-check-label mr-5 col-lg-1"
                       htmlFor="gender"
                     >
                       Male
                     </label>
                     <input
-                      className="form-check-input col-lg-2"
+                      className="form-check-input col-lg-1"
                       type="radio"
                       name="gender"
                       onChange={(e) => setGender(e.target.value)}
@@ -120,7 +120,7 @@ const Create = (props) => {
                       value="Female"
                     />
                     <label
-                      className="form-check-label col-lg-2 col-form-label"
+                      className="form-check-label col-lg-1 col-form-label"
                       htmlFor="gender"
                     >
                       Female

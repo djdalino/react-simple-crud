@@ -56,5 +56,10 @@ input.btn.btn-primary {
   margin-left: -1.25rem;
 }
 form.mx-auto {
-  width: 500px;
+  max-width: 500px;
+}
+@media screen and (max-width: 411px) {
+  .crud-wrapper {
+    margin: 0;
+  }
 }
