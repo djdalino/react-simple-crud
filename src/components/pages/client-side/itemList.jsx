@@ -45,7 +45,7 @@ const ItemList = ({ value, handleModalData }) => {
               "Not Enrolled"
             ) : course.length > 1 ? (
               <button
-                className="btn btn-success view-course"
+                className="btn btn-success view-course "
                 onClick={() => handleModalData(_id)}
               >
                 View Courses({course.length})

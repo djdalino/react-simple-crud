@@ -9,7 +9,11 @@ const Read = () => {
       {(value) => {
         const { data, deleteItem, modal, handleModalData } = value;
         if (data.length === 0) {
-          return null;
+          return (
+            <div className="mt-5">
+              <h1 className="text-center">No data</h1>
+            </div>
+          );
         }
         return (
           <React.Fragment>

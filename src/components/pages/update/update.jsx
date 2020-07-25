@@ -3,7 +3,8 @@ import { StateContext } from "../../../context/context";
 import DatePicker from "react-datepicker";
 import { courses } from "../course/course";
 import MultiSelect from "react-multi-select-component";
-import { withRouter } from "react-router-dom";
+import { withRouter, Link } from "react-router-dom";
+
 const Update = (props) => {
   const editId = props.match.params.id;
   const [data, setData] = useContext(StateContext);
@@ -34,7 +35,8 @@ const Update = (props) => {
       item.firstName === "" ||
       item.lastName === "" ||
       birthday === "" ||
-      gender === ""
+      gender === "" ||
+      course.length < 1
     ) {
       setError(true);
     } else {
@@ -48,7 +50,7 @@ const Update = (props) => {
         course: course,
       });
 
-      alert("edit successfully");
+      alert("Update successfully");
       props.history.push("/");
     }
   };
@@ -146,7 +148,7 @@ const Update = (props) => {
           </fieldset>
           <div className="form-group row">
             <label htmlFor="course" className="col-sm-4">
-              Select Course
+              Select Course*
             </label>
             <MultiSelect
               className="col-sm"
@@ -155,7 +157,16 @@ const Update = (props) => {
               onChange={setCourse}
             />
           </div>
-          <input className="btn btn-primary" type="submit" value="submit" />
+          <div className="row justify-content-center mt-5">
+            <input
+              className="btn btn-primary mr-4"
+              type="submit"
+              value="Submit"
+            />
+            <Link to="/create" className="btn btn-danger">
+              Back
+            </Link>
+          </div>
         </form>
       </div>
     </div>

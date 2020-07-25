@@ -13,6 +13,7 @@ const ManageState = (props) => {
   const [gender, setGender] = useState("");
   const [course, setCourse] = useState([]);
   const [error, setError] = useState(false);
+  const [success, setSuccess] = useState(false);
   const [modal, setModal] = useState(false);
   const [modalData, setModalData] = useState([]);
   const [currentUser, setCurrentUser] = useState([]);
@@ -33,7 +34,8 @@ const ManageState = (props) => {
       firstName === "" ||
       lastName === "" ||
       birthday === "" ||
-      gender === ""
+      gender === "" ||
+      course.length < 1
     ) {
       setError(true);
     } else {
@@ -49,8 +51,7 @@ const ManageState = (props) => {
           course,
         },
       ]);
-      alert("Submitted successfully");
-      e.target.reset();
+      setSuccess(true);
       setError(false);
     }
   };
@@ -81,6 +82,8 @@ const ManageState = (props) => {
         course,
         setCourse,
         error,
+        success,
+        setSuccess,
         modal,
         setModal,
         modalData,

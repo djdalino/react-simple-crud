@@ -23,6 +23,7 @@ const Create = (props) => {
           course,
           setCourse,
           error,
+          success,
         } = value;
         return (
           <div className="container">
@@ -31,6 +32,13 @@ const Create = (props) => {
               {error ? (
                 <div className="alert alert-danger">
                   Fill all * required fields
+                </div>
+              ) : (
+                ""
+              )}
+              {success ? (
+                <div className="alert alert-success text-capitalize">
+                  successfully submitted
                 </div>
               ) : (
                 ""

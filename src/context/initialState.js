@@ -74,6 +74,15 @@ export const initialState = [
         value: 7,
         label: "BS IN GEOGRAPHY",
       },
+
+      {
+        value: 13,
+        label: "BS IN PHARMACY",
+      },
+      {
+        value: 15,
+        label: "BS IN NURSING",
+      },
     ],
   },
   {
@@ -134,6 +143,10 @@ export const initialState = [
         value: 12,
         label: "BS IN PHYSICS",
       },
+      {
+        value: 14,
+        label: "BS IN NUTRITION",
+      },
     ],
   },
   {
@@ -151,6 +164,18 @@ export const initialState = [
       {
         value: 8,
         label: "BS IN FORESTRY",
+      },
+      {
+        value: 7,
+        label: "BS IN GEOGRAPHY",
+      },
+      {
+        value: 5,
+        label: "BS IN JOURNALISM",
+      },
+      {
+        value: 6,
+        label: "BS IN GEOLOGY",
       },
       {
         value: 11,

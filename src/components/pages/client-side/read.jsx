@@ -9,11 +9,15 @@ const Read = () => {
       {(value) => {
         const { data, modal, handleModalData } = value;
         if (data.length === 0) {
-          return null;
+          return (
+            <div className="mt-5">
+              <h1 className="text-center">No data</h1>
+            </div>
+          );
         }
         return (
           <div className="container">
-            <h1 className="text-center mt-3">Student Enrollees</h1>
+            <h1 className="text-center mt-3">Student Enrolled</h1>
             <ItemColumn />
 
             {data.map((d) => {

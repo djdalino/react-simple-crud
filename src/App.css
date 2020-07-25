@@ -38,13 +38,12 @@ h1.text-center {
   margin-bottom: 30px;
 }
 
-input.btn.btn-primary {
-  padding: 10px 25px;
+/* input.btn.btn-primary {
   position: relative;
   left: 50%;
   right: 50%;
   top: 10px;
-}
+} */
 
 .form-check-input {
   position: absolute;
@@ -90,11 +89,10 @@ h1.text-center {
   font-size: 30px;
 }
 
-input.btn.btn-primary {
-  padding: 10px 25px;
+/* input.btn.btn-primary {
   position: initial;
   margin-top: 15px;
-}
+} */
 
 .item-list {
   background-color: #343a400f;
