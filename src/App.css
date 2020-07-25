@@ -29,13 +29,9 @@
 }
 
 .crud-wrapper {
-  margin: 50px;
+  margin-top: 30px;
   padding: 40px;
   background: #343a401a;
-}
-
-h1.text-center {
-  margin-bottom: 30px;
 }
 
 h1.text-center {
@@ -58,8 +54,139 @@ input.btn.btn-primary {
 form.mx-auto {
   max-width: 500px;
 }
+.course-link {
+  cursor: pointer !important;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+  width: 95%;
+  margin: 10px auto !important;
+}
+
+label.col-lg-3.col-sm-3.col-form-label {
+  padding: 0;
+}
+
+label.col-lg-3.col-form-label {
+  padding: 0;
+}
+
+.form-check {
+  padding: 0;
+}
+
+.go355775859.col {
+  padding-left: 0;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+  width: 95%;
+  margin: 10px 0 !important;
+}
+
+h1.text-center {
+  font-size: 30px;
+}
+
+input.btn.btn-primary {
+  padding: 10px 25px;
+  position: initial;
+  margin-top: 15px;
+}
+
+.item-list {
+  background-color: #343a400f;
+  margin-top: 5px;
+  padding: 30px !important;
+  border: none !important;
+}
+
+.modal-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.5);
+  background: #fefafad4;
+  width: 100%;
+  height: 100%;
+}
+
+.button-wrapper {
+  width: 100%;
+}
+
+button.close {
+  padding: 0;
+  background-color: transparent;
+  border: 0;
+  z-index: 1000;
+  position: absolute;
+  right: 32px;
+  top: 9px;
+}
+
+button.close.close-modal span {
+  z-index: 1000;
+  position: fixed;
+  overflow: visible;
+}
+.row {
+  margin-right: 0px !important;
+  margin-left: 0px !important;
+}
+
 @media screen and (max-width: 411px) {
   .crud-wrapper {
-    margin: 0;
+    margin: 30px 0px;
+  }
+  .modal-body {
+    overflow: auto;
+    top: 11%;
+    background-color: #e8e8e8;
+    margin: auto;
+    width: 92% !important;
+    height: 80vh !important;
+  }
+}
+.form-check-input {
+  position: absolute;
+  margin-top: 7px;
+  margin-left: -1.25rem;
+}
+legend.col-form-label.col-lg-3.col-sm-3.pt-0 {
+  padding: 0px;
+}
+@media screen and (max-width: 821px) {
+  .modal-body {
+    overflow: auto;
+    top: 11% !important;
+    height: 80vh !important;
+  }
+  .crud-wrapper {
+    background: #343a401a;
+  }
+  .item-list {
+    background-color: #343a401a;
+    margin: 20px 0px;
+    padding: 30px !important;
+  }
+  .button-item {
+    margin: 5px !important;
+  }
+  .button-edit,
+  .button-delete {
+    align-items: center;
+    vertical-align: middle;
+    padding: 10px 20px !important;
+  }
+  .bg-gray {
+    background-color: #343a401a;
+  }
+  .view-course {
+    margin-top: 10px;
   }
 }

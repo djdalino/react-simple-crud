@@ -98,41 +98,48 @@ const Create = (props) => {
                     dropdownMode="select"
                   />
                 </div>
-                <div className="form-group row">
-                  <label htmlFor="gender" className="col-lg-3 col-form-label">
-                    Gender*
-                  </label>
-                  <div className="form-check">
-                    <input
-                      className="form-check-input col-lg-1"
-                      type="radio"
-                      name="gender"
-                      onChange={(e) => setGender(e.target.value)}
-                      id="exampleRadios1"
-                      value="Male"
-                    />
-                    <label
-                      className="form-check-label mr-5 col-lg-1"
-                      htmlFor="gender"
-                    >
-                      Male
-                    </label>
-                    <input
-                      className="form-check-input col-lg-1"
-                      type="radio"
-                      name="gender"
-                      onChange={(e) => setGender(e.target.value)}
-                      id="exampleRadios1"
-                      value="Female"
-                    />
-                    <label
-                      className="form-check-label col-lg-1 col-form-label"
-                      htmlFor="gender"
-                    >
-                      Female
-                    </label>
+
+                <fieldset className="form-group">
+                  <div className="row">
+                    <legend className="col-form-label col-lg-3 col-sm-3 pt-0">
+                      Gender *
+                    </legend>
+                    <div className="col-sm-2 ml-2 align-self-end">
+                      <div className="form-check">
+                        <input
+                          className="form-check-input"
+                          type="radio"
+                          name="gender"
+                          onChange={(e) => setGender(e.target.value)}
+                          id="exampleRadios1"
+                          value="Male"
+                        />
+                        <label
+                          className="form-check-label"
+                          htmlFor="gridRadios1"
+                        >
+                          Male
+                        </label>
+                      </div>
+                      <div className="form-check">
+                        <input
+                          className="form-check-input"
+                          type="radio"
+                          name="gender"
+                          onChange={(e) => setGender(e.target.value)}
+                          id="exampleRadios1"
+                          value="Female"
+                        />
+                        <label
+                          className="form-check-label"
+                          htmlFor="gridRadios2"
+                        >
+                          Female
+                        </label>
+                      </div>
+                    </div>
                   </div>
-                </div>
+                </fieldset>
                 <div className="form-group row">
                   <label htmlFor="course" className="col-lg-3 col-form-label">
                     Select Course

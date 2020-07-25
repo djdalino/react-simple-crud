@@ -49,6 +49,9 @@ const ManageState = (props) => {
           course,
         },
       ]);
+      alert("Submitted successfully");
+      e.target.reset();
+      setError(false);
     }
   };
 
@@ -61,7 +64,6 @@ const ManageState = (props) => {
   const editItem = (id) => {
     setCurrentUser(data.find((d) => d._id === id));
   };
-  console.log(currentUser._id);
   return (
     <StateProvider.Provider
       value={{

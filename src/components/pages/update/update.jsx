@@ -54,105 +54,110 @@ const Update = (props) => {
   };
   return (
     <div className="container">
-      <h1 className="text-center">Edit</h1>
-      {error ? (
-        <div className="alert alert-danger">Fill all * required fields</div>
-      ) : (
-        ""
-      )}
+      <div className="crud-wrapper">
+        <h1 className="text-center">Update student information</h1>
+        {error ? (
+          <div className="alert alert-danger">Fill all * required fields</div>
+        ) : (
+          ""
+        )}
 
-      <form onSubmit={updateItem}>
-        <div className="form-group row">
-          <label htmlFor="firstName" className="col-sm-2 col-form-label">
-            First Name*
-          </label>
-          <input
-            className="col-sm-4"
-            type="text"
-            name="firstName"
-            value={item.firstName}
-            onChange={handleInputChange}
-          />
-        </div>
-        <div className="form-group row">
-          <label htmlFor="middleName" className="col-sm-2 col-form-label">
-            Middle Name
-          </label>
-          <input
-            className="col-sm-4"
-            type="text"
-            name="middleName"
-            value={item.middleName}
-            onChange={handleInputChange}
-          />
-        </div>
-        <div className="form-group row">
-          <label htmlFor="lastName" className="col-sm-2 col-form-label">
-            Last Name*
-          </label>
-          <input
-            className="col-sm-4"
-            type="text"
-            name="lastName"
-            value={item.lastName}
-            onChange={handleInputChange}
-          />
-        </div>
-
-        <div className="form-group row">
-          <label htmlFor="birthday" className="col-sm-2 col-form-label">
-            Birth Date*
-          </label>
-          <DatePicker
-            selected={birthday}
-            onChange={(date) => setBirthday(date)}
-          />
-        </div>
-        <div className="form-group row">
-          <label htmlFor="gender" className="col-sm-2 col-form-label">
-            Gender*
-          </label>
-          <div className="form-check">
-            <input
-              className="form-check-input"
-              type="radio"
-              name="gender"
-              onChange={(e) => setGender(e.currentTarget.value)}
-              id="exampleRadios1"
-              value="Male"
-            />
-            <label className="form-check-label mr-5 col-sm-2" htmlFor="gender">
-              Male
+        <form onSubmit={updateItem} className="mx-auto">
+          <div className="form-group row">
+            <label htmlFor="firstName" className="col-sm-4 col-form-label">
+              First Name*
             </label>
             <input
-              className="form-check-input col-sm-2"
-              type="radio"
-              name="male"
-              onChange={(e) => setGender(e.currentTarget.value)}
-              id="exampleRadios1"
-              value="Female"
+              className="col-sm"
+              type="text"
+              name="firstName"
+              value={item.firstName}
+              onChange={handleInputChange}
             />
-            <label
-              className="form-check-label col-sm-2 col-form-label"
-              htmlFor="female"
-            >
-              Female
-            </label>
           </div>
-        </div>
-        <div className="form-group row">
-          <label htmlFor="course" className="col-sm-2">
-            Select Course
-          </label>
-          <MultiSelect
-            className="col-sm-4"
-            options={courses}
-            value={course}
-            onChange={setCourse}
-          />
-        </div>
-        <input className="btn btn-primary" type="submit" value="submit" />
-      </form>
+          <div className="form-group row">
+            <label htmlFor="middleName" className="col-sm-4 col-form-label">
+              Middle Name
+            </label>
+            <input
+              className="col-sm"
+              type="text"
+              name="middleName"
+              value={item.middleName}
+              onChange={handleInputChange}
+            />
+          </div>
+          <div className="form-group row">
+            <label htmlFor="lastName" className="col-sm-4 col-form-label">
+              Last Name*
+            </label>
+            <input
+              className="col-sm"
+              type="text"
+              name="lastName"
+              value={item.lastName}
+              onChange={handleInputChange}
+            />
+          </div>
+
+          <div className="form-group row">
+            <label htmlFor="birthday" className="col-sm-4 col-form-label">
+              Birth Date*
+            </label>
+            <DatePicker
+              selected={birthday}
+              onChange={(date) => setBirthday(date)}
+            />
+          </div>
+          <fieldset className="form-group">
+            <div className="row">
+              <legend className="col-form-label  col-sm-4 pt-0">
+                Gender *
+              </legend>
+              <div className="col-sm-2 ml-2 align-items-end">
+                <div className="form-check">
+                  <input
+                    className="form-check-input"
+                    type="radio"
+                    name="gender"
+                    onChange={(e) => setGender(e.target.value)}
+                    id="exampleRadios1"
+                    value="Male"
+                  />
+                  <label className="form-check-label" for="gridRadios1">
+                    Male
+                  </label>
+                </div>
+                <div className="form-check">
+                  <input
+                    className="form-check-input"
+                    type="radio"
+                    name="gender"
+                    onChange={(e) => setGender(e.target.value)}
+                    id="exampleRadios1"
+                    value="Female"
+                  />
+                  <label className="form-check-label" for="gridRadios2">
+                    Female
+                  </label>
+                </div>
+              </div>
+            </div>
+          </fieldset>
+          <div className="form-group row">
+            <label htmlFor="course" className="col-sm-4">
+              Select Course
+            </label>
+            <MultiSelect
+              className="col-sm"
+              options={courses}
+              value={course}
+              onChange={setCourse}
+            />
+          </div>
+          <input className="btn btn-primary" type="submit" value="submit" />
+        </form>
+      </div>
     </div>
   );
 };
