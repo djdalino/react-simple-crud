@@ -6,6 +6,7 @@ import * as serviceWorker from "./serviceWorker";
 import { BrowserRouter } from "react-router-dom";
 import { ManageState } from "./context/manageState";
 import { StateManageProvider } from "./context/context";
+
 ReactDOM.render(
   <React.StrictMode>
     <StateManageProvider>

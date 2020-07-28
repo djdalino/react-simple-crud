@@ -48,7 +48,7 @@ const ItemList = ({ value, handleModalData }) => {
                 className="btn btn-success view-course "
                 onClick={() => handleModalData(_id)}
               >
-                View Courses({course.length})
+                View All ({course.length})
               </button>
             ) : (
               course.map((c) => {

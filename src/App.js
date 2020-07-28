@@ -1,7 +1,6 @@
 import React from "react";
 import "./App.css";
 import { Switch, Route } from "react-router-dom";
-
 import Navbar from "./components/navbar/navbar";
 import Create from "./components/pages/create/create";
 import Client from "./components/pages/client-side/read";
