@@ -99,7 +99,7 @@ const Create = (props) => {
                   </label>
                   <DatePicker
                     selected={birthday}
-                    onChange={(date) => setBirthday(date)}
+                    onChange={(e) => setBirthday(e)}
                     peekNextMonth
                     showMonthDropdown
                     showYearDropdown

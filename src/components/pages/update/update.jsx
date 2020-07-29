@@ -108,7 +108,11 @@ const Update = (props) => {
             </label>
             <DatePicker
               selected={birthday}
-              onChange={(date) => setBirthday(date)}
+              onChange={(e) => setBirthday(e)}
+              peekNextMonth
+              showMonthDropdown
+              showYearDropdown
+              dropdownMode="select"
             />
           </div>
           <fieldset className="form-group">
